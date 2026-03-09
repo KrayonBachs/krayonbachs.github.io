@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Published Novels — Alex Krabach</title>
+  <meta name="description" content="Alex Krabach — four published novels available in print, audiobook, and ebook." />
+
+  <meta property="og:title" content="Published Novels — Alex Krabach" />
+  <meta property="og:description" content="Four published novels by Alex Krabach — available in print, audiobook, and ebook on Amazon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alex.krabach.com/books.html" />
+  <meta property="og:image" content="https://alex.krabach.com/assets/images/Group 2571.png" />
+
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 49.ico" sizes="16x16" />
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 50.ico" sizes="32x32" />
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 51.ico" sizes="48x48" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-primary':  '#0d0d0d',
+            'bg-card':     '#141414',
+            'bg-subtle':   '#1c1c1c',
+            'text-primary':'#f0f0f0',
+            'text-muted':  '#888888',
+            'accent':      '#7c3aed',
+            'accent-light':'#a78bfa',
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            body:    ['"Inter"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-bg-primary text-text-primary font-body antialiased">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-heading font-bold text-lg tracking-tight text-text-primary hover:text-accent-light transition-colors">
+        Alex Krabach<span class="text-accent">.</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-text-muted">
+        <li>
+          <a href="index.html" class="nav-link hover:text-text-primary transition-colors flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            Portfolio
+          </a>
+        </li>
+        <li><a href="index.html#projects"  class="nav-link hover:text-text-primary transition-colors">Projects</a></li>
+        <li><a href="index.html#about"     class="nav-link hover:text-text-primary transition-colors">About</a></li>
+        <li><a href="index.html#contact"   class="nav-link hover:text-text-primary transition-colors">Contact</a></li>
+        <li>
+          <a href="assets/documents/Krabach_Resume_11_13.pdf" target="_blank" rel="noopener noreferrer"
+             class="nav-link hover:text-text-primary transition-colors">Resume</a>
+        </li>
+        <li>
+          <a href="index.html#contact" class="px-4 py-2 rounded-md bg-accent hover:bg-accent-light text-white text-sm font-semibold transition-colors">
+            Hire Me
+          </a>
+        </li>
+      </ul>
+
+      <button id="menu-btn" class="md:hidden text-text-muted hover:text-text-primary transition-colors" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-bg-card border-t border-white/5">
+      <ul class="flex flex-col gap-0 text-sm font-medium text-text-muted">
+        <li><a href="index.html" class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">← Portfolio</a></li>
+        <li><a href="index.html#projects" class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Projects</a></li>
+        <li><a href="index.html#about"    class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">About</a></li>
+        <li><a href="index.html#contact"  class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Contact</a></li>
+        <li>
+          <a href="assets/documents/Krabach_Resume_11_13.pdf" target="_blank" rel="noopener noreferrer"
+             class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Resume</a>
+        </li>
+        <li><a href="index.html#contact" class="mobile-nav-link block px-6 py-4 text-accent-light hover:text-accent transition-colors">Hire Me →</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- INTRO -->
+  <section class="pt-40 pb-24 px-6 bg-bg-primary">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16 reveal">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-2">Writing</p>
+        <h1 class="font-heading font-bold text-4xl md:text-5xl text-text-primary mb-6">Published Novels</h1>
+        <p class="text-text-muted text-lg leading-relaxed max-w-2xl">
+          Writing is my other creative outlet — four novels available in print, audiobook, and ebook.
+        </p>
+      </div>
+
+      <!-- Books grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Book 1 — The Adventures of Life -->
+        <article class="project-card rounded-xl bg-bg-card border border-white/5 overflow-hidden flex flex-col reveal">
+          <div class="aspect-[3/4] bg-bg-subtle overflow-hidden max-h-64">
+            <img
+              src="assets/images/Mask group.png"
+              alt="The Adventures of Life cover"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              onerror="this.parentElement.classList.add('img-placeholder')"
+            />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h2 class="font-heading font-semibold text-xl text-text-primary mb-2">
+              The Adventures of Life
+            </h2>
+            <p class="text-text-muted text-sm leading-relaxed mb-4 flex-1">
+              A collection of stories told by a wide range of voices — from programmers launching companies to soldiers overseas to high school love stories. Shared so that those who cannot experience life still have an opportunity to see what it looks like for others.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag tag-sm">Short Stories</span>
+              <span class="tag tag-sm">Anthology</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 2 — No Happy Endings -->
+        <article class="project-card rounded-xl bg-bg-card border border-white/5 overflow-hidden flex flex-col reveal">
+          <div class="aspect-[3/4] bg-bg-subtle overflow-hidden max-h-64">
+            <img
+              src="assets/images/Full Cover 2.png"
+              alt="No Happy Endings: The End is Never Kind cover"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              onerror="this.parentElement.classList.add('img-placeholder')"
+            />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h2 class="font-heading font-semibold text-xl text-text-primary mb-2">
+              No Happy Endings: The End is Never Kind
+            </h2>
+            <p class="text-text-muted text-sm leading-relaxed mb-4 flex-1">
+              Every story carries the weight of loss, regret, or quiet despair. From soldiers forgotten by the town they swore to protect, to lovers separated by forces beyond their control — each bound by the truth that not every story ends with a smile.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag tag-sm">Short Stories</span>
+              <span class="tag tag-sm">Drama</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 3 — Problematic Ducks -->
+        <article class="project-card rounded-xl bg-bg-card border border-white/5 overflow-hidden flex flex-col reveal">
+          <div class="aspect-[3/4] bg-bg-subtle overflow-hidden max-h-64">
+            <img
+              src="assets/images/0d6e533c-7ce5-4ff0-bc5a-f4c33df29cfe.png"
+              alt="Problematic Ducks and Ingenious Curiosities cover"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              onerror="this.parentElement.classList.add('img-placeholder')"
+            />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h2 class="font-heading font-semibold text-xl text-text-primary mb-2">
+              Problematic Ducks and Ingenious Curiosities
+            </h2>
+            <p class="text-text-muted text-sm leading-relaxed mb-4 flex-1">
+              The world is a curious place. Follow Tim Meadows — a man of mystery whose history is kept secret — through heists, heartbreak, mountain climbs, and questions that bend reality. Be prepared to have questions.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag tag-sm">Fiction</span>
+              <span class="tag tag-sm">Adventure</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 4 — Tale of the Howling Minnow -->
+        <article class="project-card rounded-xl bg-bg-card border border-white/5 overflow-hidden flex flex-col reveal">
+          <div class="aspect-[3/4] bg-bg-subtle overflow-hidden max-h-64">
+            <img
+              src="assets/images/43469989-88ff-46bd-bbfd-3205d6bd0f72.png"
+              alt="Tale of the Howling Minnow cover"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              onerror="this.parentElement.classList.add('img-placeholder')"
+            />
+          </div>
+          <div class="p-6 flex flex-col flex-1">
+            <h2 class="font-heading font-semibold text-xl text-text-primary mb-2">
+              Tale of the Howling Minnow
+            </h2>
+            <p class="text-text-muted text-sm leading-relaxed mb-4 flex-1">
+              Sailing the high seas, plundering islands, helping command a fine seafaring vessel. First Mate Beckett must help find a possibly mythical island and help the youngest captain ever to set sail earn his reputation along the way.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag tag-sm">Fiction</span>
+              <span class="tag tag-sm">Nautical</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-12 text-center reveal">
+        <a href="https://www.amazon.com/stores/Alex-Krabach/author/B0GHSM4S49" target="_blank" rel="noopener noreferrer"
+           class="px-8 py-3 rounded-lg bg-accent hover:bg-accent-light text-white font-semibold text-sm transition-all duration-200 shadow-glow">
+          Browse on Amazon →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 px-6 border-t border-white/5 bg-bg-primary">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
+      <p>© 2026 Alex Krabach. Handcrafted HTML, CSS &amp; JS.</p>
+      <p>Producer &amp; Project Manager · Open to opportunities</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

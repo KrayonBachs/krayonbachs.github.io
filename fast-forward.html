@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fast Forward — Alex Krabach</title>
+  <meta name="description" content="Fast Forward — Bachelor's capstone vaporwave movement shooter on Steam. Produced by Alex Krabach." />
+
+  <meta property="og:title" content="Fast Forward — Alex Krabach" />
+  <meta property="og:description" content="Bachelor's capstone vaporwave movement shooter on Steam. Year-long production led by Alex Krabach as Producer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alex.krabach.com/fast-forward.html" />
+  <meta property="og:image" content="https://alex.krabach.com/assets/images/Group 2571.png" />
+
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 49.ico" sizes="16x16" />
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 50.ico" sizes="32x32" />
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 51.ico" sizes="48x48" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-primary':  '#0d0d0d',
+            'bg-card':     '#141414',
+            'bg-subtle':   '#1c1c1c',
+            'text-primary':'#f0f0f0',
+            'text-muted':  '#888888',
+            'accent':      '#7c3aed',
+            'accent-light':'#a78bfa',
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            body:    ['"Inter"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-bg-primary text-text-primary font-body antialiased">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-heading font-bold text-lg tracking-tight text-text-primary hover:text-accent-light transition-colors">
+        Alex Krabach<span class="text-accent">.</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-text-muted">
+        <li>
+          <a href="index.html" class="nav-link hover:text-text-primary transition-colors flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            Portfolio
+          </a>
+        </li>
+        <li><a href="index.html#projects"  class="nav-link hover:text-text-primary transition-colors">Projects</a></li>
+        <li><a href="index.html#about"     class="nav-link hover:text-text-primary transition-colors">About</a></li>
+        <li><a href="index.html#contact"   class="nav-link hover:text-text-primary transition-colors">Contact</a></li>
+        <li>
+          <a href="assets/documents/Krabach_Resume_11_13.pdf" target="_blank" rel="noopener noreferrer"
+             class="nav-link hover:text-text-primary transition-colors">Resume</a>
+        </li>
+        <li>
+          <a href="index.html#contact" class="px-4 py-2 rounded-md bg-accent hover:bg-accent-light text-white text-sm font-semibold transition-colors">
+            Hire Me
+          </a>
+        </li>
+      </ul>
+
+      <button id="menu-btn" class="md:hidden text-text-muted hover:text-text-primary transition-colors" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-bg-card border-t border-white/5">
+      <ul class="flex flex-col gap-0 text-sm font-medium text-text-muted">
+        <li><a href="index.html" class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">← Portfolio</a></li>
+        <li><a href="index.html#projects" class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Projects</a></li>
+        <li><a href="index.html#about"    class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">About</a></li>
+        <li><a href="index.html#contact"  class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Contact</a></li>
+        <li>
+          <a href="assets/documents/Krabach_Resume_11_13.pdf" target="_blank" rel="noopener noreferrer"
+             class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Resume</a>
+        </li>
+        <li><a href="index.html#contact" class="mobile-nav-link block px-6 py-4 text-accent-light hover:text-accent transition-colors">Hire Me →</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="hero-bg absolute inset-0 bg-cover bg-center bg-no-repeat"
+           style="background-image: url('assets/images/ss_4c10f56e1feec21f6a36f9f2391760147d64ac71.1920x1080.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-bg-primary/60 via-bg-primary/55 to-bg-primary"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-6 max-w-3xl mx-auto hero-content">
+      <p class="text-accent-light text-sm font-semibold tracking-widest uppercase mb-4 fade-in" style="animation-delay:0.1s">
+        Capstone Project · Steam · 2024
+      </p>
+      <h1 class="font-heading font-bold text-5xl md:text-7xl text-text-primary leading-tight mb-6 fade-in" style="animation-delay:0.25s">
+        Fast Forward
+      </h1>
+      <p class="text-text-muted text-lg md:text-xl leading-relaxed mb-10 fade-in" style="animation-delay:0.4s">
+        A fast-paced, vaporwave-inspired movement shooter where style meets speed.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in" style="animation-delay:0.55s">
+        <a href="https://store.steampowered.com/app/3999640/Fast_Forward/" target="_blank" rel="noopener noreferrer"
+           class="px-8 py-3 rounded-lg bg-accent hover:bg-accent-light text-white font-semibold text-sm transition-all duration-200 shadow-glow">
+          View on Steam →
+        </a>
+        <a href="#video"
+           class="px-8 py-3 rounded-lg border border-white/10 hover:border-accent/50 text-text-muted hover:text-text-primary font-semibold text-sm transition-all duration-200">
+          Watch Teaser ▶
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MY ROLE -->
+  <section class="py-24 px-6 bg-bg-subtle">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16 reveal">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-2">My Role</p>
+        <h2 class="font-heading font-bold text-4xl md:text-5xl text-text-primary">Producer</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div class="reveal">
+          <p class="text-text-muted leading-relaxed text-lg mb-6">
+            Fast Forward was my Bachelor's capstone project at LWIT / Quantum Shrimp Studio — a year-long production where I served as Producer, responsible for keeping a cross-discipline team aligned from pre-production through final delivery on Steam.
+          </p>
+          <p class="text-text-muted leading-relaxed">
+            I owned the full production pipeline: sprint cadence, backlog, milestone reviews, retrospectives, and inter-discipline coordination. When blockers surfaced, I triaged, escalated, or re-scoped. When scope threatened the timeline, I made the call. The game shipped on Steam in 2024.
+          </p>
+        </div>
+
+        <div class="reveal">
+          <ul class="space-y-4 text-sm text-text-muted mb-8">
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-0.5 text-base">▸</span>
+              <span>Owned sprint planning, backlog management, and milestone tracking across a full academic year</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-0.5 text-base">▸</span>
+              <span>Coordinated between art, design, and engineering to resolve blockers and protect scope</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-0.5 text-base">▸</span>
+              <span>Led retrospectives and adapted process mid-project based on team feedback</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Capstone</span>
+            <span class="tag">Year-Long</span>
+            <span class="tag">Producer</span>
+            <span class="tag">Student Project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOT GALLERY -->
+  <section class="py-24 px-6 bg-bg-primary">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12 reveal">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-2">Gallery</p>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-text-primary">Screenshots</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 reveal">
+        <div class="aspect-video overflow-hidden rounded-lg bg-bg-subtle group">
+          <img src="assets/images/ss_4c10f56e1feec21f6a36f9f2391760147d64ac71.1920x1080.jpg"
+               alt="Fast Forward screenshot 1"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="aspect-video overflow-hidden rounded-lg bg-bg-subtle group">
+          <img src="assets/images/ss_f6cc4228cf64bc52d98147247baf72c11d18bc7b.1920x1080.jpg"
+               alt="Fast Forward screenshot 2"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="aspect-video overflow-hidden rounded-lg bg-bg-subtle group">
+          <img src="assets/images/ss_b198035cb2c09ceac6292446ba622504d9315bd9.1920x1080.jpg"
+               alt="Fast Forward screenshot 3"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="aspect-video overflow-hidden rounded-lg bg-bg-subtle group">
+          <img src="assets/images/ss_bd786e264ed69d929df08f2d43c1e36052b3d19c.1920x1080.jpg"
+               alt="Fast Forward screenshot 4"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="aspect-video overflow-hidden rounded-lg bg-bg-subtle group">
+          <img src="assets/images/ss_de98dc2621f8e36a7626042a6048f8c1d9f9bd70.1920x1080.jpg"
+               alt="Fast Forward screenshot 5"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section id="video" class="py-24 px-6 bg-bg-subtle">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-12 reveal">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-2">Video</p>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-text-primary">Game Teaser</h2>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden bg-bg-card border border-white/5 reveal">
+        <video autoplay muted loop playsinline class="w-full"
+               poster="assets/images/Group 2571.png">
+          <source src="assets/videos/Fast Forward Teaser.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="mt-6 reveal">
+        <a href="assets/videos/Fast Forward Review.mp4" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-accent-light text-sm font-semibold hover:text-accent transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Watch full review →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS / TOOLS -->
+  <section class="py-24 px-6 bg-bg-primary">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12 reveal">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-2">Process</p>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-text-primary">Tools in Action</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 reveal">
+        <div class="rounded-xl overflow-hidden bg-bg-subtle group">
+          <img src="assets/images/Screenshot 2023-04-11 143805.jpg"
+               alt="Jira sprint backlog for Fast Forward"
+               class="w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="rounded-xl overflow-hidden bg-bg-subtle group">
+          <img src="assets/images/Screenshot 2023-04-11 143909.jpg"
+               alt="Confluence documentation for Fast Forward"
+               class="w-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+      </div>
+      <p class="text-text-muted text-sm mt-4 reveal">Sprint planning in Jira · Documentation in Confluence</p>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="py-16 px-6 bg-bg-subtle border-t border-white/5">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 reveal">
+      <a href="https://store.steampowered.com/app/3999640/Fast_Forward/" target="_blank" rel="noopener noreferrer"
+         class="px-8 py-3 rounded-lg bg-accent hover:bg-accent-light text-white font-semibold text-sm transition-all duration-200 shadow-glow">
+        View on Steam →
+      </a>
+      <a href="assets/documents/Bad Signal Game Design Document (1) (1).pdf" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center gap-2 text-accent-light text-sm font-semibold hover:text-accent transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        View GDD
+      </a>
+      <a href="assets/videos/Fast Forward Review.mp4" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center gap-2 text-accent-light text-sm font-semibold hover:text-accent transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Watch Review
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 px-6 border-t border-white/5 bg-bg-primary">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
+      <p>© 2026 Alex Krabach. Handcrafted HTML, CSS &amp; JS.</p>
+      <p>Producer &amp; Project Manager · Open to opportunities</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

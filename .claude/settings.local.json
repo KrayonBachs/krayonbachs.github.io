@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start:*)",
+      "Bash(git:*)",
+      "Bash(mkdir -p /c/Users/alex/.claude/projects/C--Users-alex-Portfolio/memory)",
+      "Read(//c/Users/alex/.claude/projects/C--Users-alex-Portfolio/**)",
+      "WebFetch(domain:www.alex.krabach.com)",
+      "Bash(ls:*)"
+    ]
+  }
+}

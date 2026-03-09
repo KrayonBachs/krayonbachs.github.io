@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VHS – Violent Horror Story — Alex Krabach</title>
+  <meta name="description" content="VHS: Violent Horror Story — a 10-week horror vertical slice produced by Alex Krabach for Associate's capstone." />
+
+  <meta property="og:title" content="VHS – Violent Horror Story — Alex Krabach" />
+  <meta property="og:description" content="A 10-week horror vertical slice produced under tight constraints. Associate's capstone project by Alex Krabach." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alex.krabach.com/vhs.html" />
+  <meta property="og:image" content="https://alex.krabach.com/assets/images/Group 2571.png" />
+
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 49.ico" sizes="16x16" />
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 50.ico" sizes="32x32" />
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 51.ico" sizes="48x48" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-primary':  '#0d0d0d',
+            'bg-card':     '#141414',
+            'bg-subtle':   '#1c1c1c',
+            'text-primary':'#f0f0f0',
+            'text-muted':  '#888888',
+            'accent':      '#7c3aed',
+            'accent-light':'#a78bfa',
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            body:    ['"Inter"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-bg-primary text-text-primary font-body antialiased">
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-heading font-bold text-lg tracking-tight text-text-primary hover:text-accent-light transition-colors">
+        Alex Krabach<span class="text-accent">.</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-text-muted">
+        <li>
+          <a href="index.html" class="nav-link hover:text-text-primary transition-colors flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            Portfolio
+          </a>
+        </li>
+        <li><a href="index.html#projects"  class="nav-link hover:text-text-primary transition-colors">Projects</a></li>
+        <li><a href="index.html#about"     class="nav-link hover:text-text-primary transition-colors">About</a></li>
+        <li><a href="index.html#contact"   class="nav-link hover:text-text-primary transition-colors">Contact</a></li>
+        <li>
+          <a href="assets/documents/Krabach_Resume_11_13.pdf" target="_blank" rel="noopener noreferrer"
+             class="nav-link hover:text-text-primary transition-colors">Resume</a>
+        </li>
+        <li>
+          <a href="index.html#contact" class="px-4 py-2 rounded-md bg-accent hover:bg-accent-light text-white text-sm font-semibold transition-colors">
+            Hire Me
+          </a>
+        </li>
+      </ul>
+
+      <button id="menu-btn" class="md:hidden text-text-muted hover:text-text-primary transition-colors" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-bg-card border-t border-white/5">
+      <ul class="flex flex-col gap-0 text-sm font-medium text-text-muted">
+        <li><a href="index.html" class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">← Portfolio</a></li>
+        <li><a href="index.html#projects" class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Projects</a></li>
+        <li><a href="index.html#about"    class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">About</a></li>
+        <li><a href="index.html#contact"  class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Contact</a></li>
+        <li>
+          <a href="assets/documents/Krabach_Resume_11_13.pdf" target="_blank" rel="noopener noreferrer"
+             class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Resume</a>
+        </li>
+        <li><a href="index.html#contact" class="mobile-nav-link block px-6 py-4 text-accent-light hover:text-accent transition-colors">Hire Me →</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="hero-bg absolute inset-0 bg-cover bg-center bg-no-repeat"
+           style="background-image: url('assets/images/Screenshot 2023-04-17 133223.jpg');"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-bg-primary/70 via-bg-primary/65 to-bg-primary"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-6 max-w-3xl mx-auto hero-content">
+      <p class="text-accent-light text-sm font-semibold tracking-widest uppercase mb-4 fade-in" style="animation-delay:0.1s">
+        Vertical Slice · 10 Weeks · Associate's Capstone
+      </p>
+      <h1 class="font-heading font-bold text-5xl md:text-7xl text-text-primary leading-tight mb-6 fade-in" style="animation-delay:0.25s">
+        VHS – Violent Horror Story
+      </h1>
+      <p class="text-text-muted text-lg md:text-xl leading-relaxed mb-10 fade-in" style="animation-delay:0.4s">
+        A 10-week horror vertical slice produced under tight constraints.
+      </p>
+    </div>
+  </section>
+
+  <!-- MY ROLE -->
+  <section class="py-24 px-6 bg-bg-subtle">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-16 reveal">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-2">My Role</p>
+        <h2 class="font-heading font-bold text-4xl md:text-5xl text-text-primary">Producer</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        <div class="reveal">
+          <p class="text-text-muted leading-relaxed text-lg mb-6">
+            VHS was my Associate's capstone — a horror vertical slice built in 10 weeks. I served as Producer: setting the sprint cadence, managing scope, and keeping three disciplines moving in sync under a fixed deadline.
+          </p>
+          <p class="text-text-muted leading-relaxed">
+            Ten weeks is not enough time to build a game. The job is figuring out exactly what is enough time to make something good, and then protecting that. I made fast scope calls, communicated clearly when things changed, and shipped on time.
+          </p>
+        </div>
+
+        <div class="reveal">
+          <ul class="space-y-4 text-sm text-text-muted mb-8">
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-0.5 text-base">▸</span>
+              <span>Owned sprint planning and scope decisions for a 10-week production cycle</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-0.5 text-base">▸</span>
+              <span>Coordinated between art, design, and engineering disciplines</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-0.5 text-base">▸</span>
+              <span>Made fast scope calls and clear communication to ship on time</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Vertical Slice</span>
+            <span class="tag">10 Weeks</span>
+            <span class="tag">Horror</span>
+            <span class="tag">Producer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOT GALLERY -->
+  <section class="py-24 px-6 bg-bg-subtle">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12 reveal">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-2">Screenshots</p>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl text-text-primary">Gallery</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 reveal">
+        <div class="aspect-video overflow-hidden rounded-lg bg-bg-subtle group">
+          <img src="assets/images/Screenshot 2023-10-13 121749.png"
+               alt="VHS screenshot 1"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+        <div class="aspect-video overflow-hidden rounded-lg bg-bg-subtle group">
+          <img src="assets/images/Screenshot 2023-04-17 133223.jpg"
+               alt="VHS screenshot 2"
+               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPSTONE REVIEW VIDEO -->
+  <section class="py-24 px-6 bg-bg-primary">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12 reveal">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-2">Footage</p>
+        <h2 class="font-heading font-bold text-3xl text-text-primary">Capstone Review</h2>
+      </div>
+      <div class="rounded-xl overflow-hidden reveal">
+        <video controls class="w-full rounded-xl"
+               poster="assets/images/Screenshot 2023-04-17 133223.jpg">
+          <source src="assets/videos/CapstoneReview.mov" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 px-6 border-t border-white/5 bg-bg-primary">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
+      <p>© 2026 Alex Krabach. Handcrafted HTML, CSS &amp; JS.</p>
+      <p>Producer &amp; Project Manager · Open to opportunities</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

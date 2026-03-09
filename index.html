@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alex Krabach — Producer & Project Manager</title>
+  <meta name="description" content="Producer & Project Manager portfolio — shipping games, card games, and more." />
+
+  <meta property="og:title" content="Alex Krabach — Producer & Project Manager" />
+  <meta property="og:description" content="Producer and studio lead with a track record of shipping titles across multiple studios. Open to production roles." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alex.krabach.com" />
+  <meta property="og:image" content="https://alex.krabach.com/assets/images/Group 2571.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 49.ico" sizes="16x16" />
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 50.ico" sizes="32x32" />
+  <link rel="icon" type="image/x-icon" href="assets/images/Group 51.ico" sizes="48x48" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-primary':  '#0d0d0d',
+            'bg-card':     '#141414',
+            'bg-subtle':   '#1c1c1c',
+            'text-primary':'#f0f0f0',
+            'text-muted':  '#888888',
+            'accent':      '#7c3aed',
+            'accent-light':'#a78bfa',
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            body:    ['"Inter"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-bg-primary text-text-primary font-body antialiased">
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo / Name -->
+      <a href="#hero" class="font-heading font-bold text-lg tracking-tight text-text-primary hover:text-accent-light transition-colors">
+        Alex Krabach<span class="text-accent">.</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-text-muted">
+        <li><a href="#projects"  class="nav-link hover:text-text-primary transition-colors">Projects</a></li>
+        <li><a href="#about"     class="nav-link hover:text-text-primary transition-colors">About</a></li>
+        <li><a href="#contact"   class="nav-link hover:text-text-primary transition-colors">Contact</a></li>
+        <li>
+          <a href="assets/documents/Krabach_Resume_11_13.pdf" target="_blank" rel="noopener noreferrer"
+             class="nav-link hover:text-text-primary transition-colors">Resume</a>
+        </li>
+        <li>
+          <a href="#contact" class="px-4 py-2 rounded-md bg-accent hover:bg-accent-light text-white text-sm font-semibold transition-colors">
+            Hire Me
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-btn" class="md:hidden text-text-muted hover:text-text-primary transition-colors" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-bg-card border-t border-white/5">
+      <ul class="flex flex-col gap-0 text-sm font-medium text-text-muted">
+        <li><a href="#projects" class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Projects</a></li>
+        <li><a href="#about"    class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">About</a></li>
+        <li><a href="#contact"  class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Contact</a></li>
+        <li>
+          <a href="assets/documents/Krabach_Resume_11_13.pdf" target="_blank" rel="noopener noreferrer"
+             class="mobile-nav-link block px-6 py-4 hover:text-text-primary hover:bg-bg-subtle transition-colors">Resume</a>
+        </li>
+        <li><a href="#contact"  class="mobile-nav-link block px-6 py-4 text-accent-light hover:text-accent transition-colors">Hire Me →</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+    <div class="absolute inset-0 z-0">
+      <div class="hero-dot-grid absolute inset-0"></div>
+      <div class="hero-dot-glow absolute inset-0"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-bg-primary"></div>
+    </div>
+    <div class="absolute inset-0 z-0 pointer-events-none"></div>
+
+    <!-- Hero content -->
+    <div class="relative z-10 text-center px-6 max-w-3xl mx-auto hero-content">
+      <p class="text-accent-light text-sm font-semibold tracking-widest uppercase mb-4 fade-in" style="animation-delay:0.1s">
+        Producer & Project Manager
+      </p>
+      <h1 class="font-heading font-bold text-5xl md:text-7xl text-text-primary leading-tight mb-6 fade-in" style="animation-delay:0.25s">
+        Alex Krabach<br />
+        <span class="text-gradient">Ships Projects</span><span class="text-accent">.</span>
+      </h1>
+      <p class="text-text-muted text-lg md:text-xl leading-relaxed mb-10 fade-in" style="animation-delay:0.4s">
+        From year-long capstones to Kickstarter launches, I produce games, card games, and a novel or two.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in" style="animation-delay:0.55s">
+        <a href="#projects" class="btn-primary px-8 py-3 rounded-lg bg-accent hover:bg-accent-light text-white font-semibold text-sm transition-all duration-200 shadow-glow">
+          See My Work
+        </a>
+        <a href="#about" class="px-8 py-3 rounded-lg border border-white/10 hover:border-accent/50 text-text-muted hover:text-text-primary font-semibold text-sm transition-all duration-200">
+          About Me
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 scroll-indicator fade-in" style="animation-delay:1s">
+      <div class="w-5 h-9 rounded-full border-2 border-white/20 flex justify-center pt-2">
+        <div class="w-1 h-2 rounded-full bg-accent-light scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FEATURED PROJECT (Steam game)
+  ============================================================ -->
+  <section id="projects" class="py-24 px-6 bg-bg-subtle">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- Section header -->
+      <div class="mb-16 reveal">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-2">Featured Project</p>
+        <h2 class="font-heading font-bold text-4xl md:text-5xl text-text-primary">The Main Event</h2>
+      </div>
+
+      <!-- Featured card -->
+      <div class="featured-card rounded-2xl bg-bg-card border border-white/5 overflow-hidden reveal">
+
+        <!-- Screenshot gallery -->
+        <a href="fast-forward.html" class="block">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-black">
+          <div class="md:col-span-2 aspect-video bg-bg-subtle relative overflow-hidden">
+            <video
+              autoplay muted loop playsinline
+              class="w-full h-full object-cover"
+              poster="assets/images/Group 2571.png"
+            >
+              <source src="assets/videos/Fast Forward Teaser.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="flex flex-col gap-0.5">
+            <div class="flex-1 aspect-video md:aspect-auto bg-bg-subtle relative overflow-hidden group">
+              <img
+                src="assets/images/ss_de98dc2621f8e36a7626042a6048f8c1d9f9bd70.1920x1080.jpg"
+                alt="Fast Forward gameplay screenshot"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="flex-1 aspect-video md:aspect-auto bg-bg-subtle relative overflow-hidden group">
+              <img
+                src="assets/images/ss_bd786e264ed69d929df08f2d43c1e36052b3d19c.1920x1080.jpg"
+                alt="Fast Forward gameplay screenshot"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </div>
+        </a>
+
+        <!-- Card content -->
+        <div class="p-8 md:p-10">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+            <div class="flex-1">
+              <h3 class="font-heading font-bold text-3xl text-text-primary mb-3">
+                Fast Forward
+              </h3>
+              <p class="text-text-muted leading-relaxed max-w-2xl mb-6">
+                Fast Forward was my Bachelors Capstone project — a year-long production where I served as Producer, responsible for keeping a cross-discipline team aligned from pre-production through final delivery.
+              </p>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2 mb-8">
+                <span class="tag">Capstone</span>
+                <span class="tag">Year-Long</span>
+                <span class="tag">Producer</span>
+                <span class="tag">Student Project</span>
+              </div>
+
+              <!-- Contributions list -->
+              <ul class="space-y-2 text-sm text-text-muted">
+                <li class="flex items-start gap-2">
+                  <span class="text-accent mt-0.5">▸</span>
+                  <span>Owned sprint planning, backlog management, and milestone tracking across a full academic year</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-accent mt-0.5">▸</span>
+                  <span>Coordinated between art, design, and engineering to resolve blockers and protect scope</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-accent mt-0.5">▸</span>
+                  <span>Led retrospectives and adapted process mid-project based on team feedback</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex-shrink-0">
+              <a
+                href="fast-forward.html"
+                class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent hover:bg-accent-light text-white font-semibold text-sm transition-all duration-200 shadow-glow whitespace-nowrap"
+              >
+                <!-- External link icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                View Project
+              </a>
+              <div class="flex flex-col gap-2 mt-3">
+                <a
+                  href="assets/videos/Fast Forward Review.mp4"
+                  target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 text-accent-light text-sm font-semibold hover:text-accent transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Watch Review
+                </a>
+                <a
+                  href="assets/documents/Bad Signal Game Design Document (1) (1).pdf"
+                  target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 text-accent-light text-sm font-semibold hover:text-accent transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  View GDD
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OTHER PROJECTS
+  ============================================================ -->
+  <section class="py-24 px-6 bg-bg-primary">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="mb-16 reveal">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-2">More Work</p>
+        <h2 class="font-heading font-bold text-4xl md:text-5xl text-text-primary">Other Projects</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project Card 1 — Tales & Trials -->
+        <article class="project-card rounded-xl bg-bg-card border border-white/5 overflow-hidden flex flex-col reveal">
+          <a href="tales-and-trials.html" class="block">
+          <div class="aspect-video bg-bg-subtle overflow-hidden">
+            <img
+              src="assets/images/2a5c85ce24df5592ecf56e48bcea48a5_original.png"
+              alt="Tales &amp; Trials Kickstarter campaign"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              onerror="this.parentElement.classList.add('img-placeholder')"
+            />
+          </div>
+          </a>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-heading font-semibold text-xl text-text-primary mb-2">Tales &amp; Trials</h3>
+            <p class="text-text-muted text-sm leading-relaxed mb-4 flex-1">
+              An independent card game I founded and launched on Kickstarter. What started as a solo passion project grew into a full team production — and before it did, I wore every hat: designer, producer, writer, marketer, and public affairs.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag tag-sm">Card Game</span>
+              <span class="tag tag-sm">Kickstarter</span>
+              <span class="tag tag-sm">Founder</span>
+              <span class="tag tag-sm">Independent</span>
+            </div>
+            <a href="tales-and-trials.html" class="text-accent-light text-sm font-semibold hover:text-accent transition-colors inline-flex items-center gap-1">
+              Learn more <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project Card 2 — Starchild -->
+        <article class="project-card rounded-xl bg-bg-card border border-white/5 overflow-hidden flex flex-col reveal">
+          <a href="starchild.html" class="block">
+          <div class="aspect-video bg-bg-subtle overflow-hidden">
+            <img
+              src="assets/images/SplashScreen.png"
+              alt="Starchild splash screen"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              onerror="this.parentElement.classList.add('img-placeholder')"
+            />
+          </div>
+          </a>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-heading font-semibold text-xl text-text-primary mb-2">Starchild</h3>
+            <p class="text-text-muted text-sm leading-relaxed mb-4 flex-1">
+              Produced a semi-complete 2D platformer for my Bachelors 2D design class, coordinating art and design deliverables to hit the semester deadline.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag tag-sm">2D Platformer</span>
+              <span class="tag tag-sm">Capstone</span>
+              <span class="tag tag-sm">Producer</span>
+              <span class="tag tag-sm">Student Project</span>
+            </div>
+            <a href="starchild.html" class="text-accent-light text-sm font-semibold hover:text-accent transition-colors inline-flex items-center gap-1">
+              Learn more <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project Card 3 — VHS: Violent Horror Story -->
+        <article class="project-card rounded-xl bg-bg-card border border-white/5 overflow-hidden flex flex-col reveal">
+          <a href="vhs.html" class="block">
+          <div class="aspect-video bg-bg-subtle overflow-hidden">
+            <img
+              src="assets/images/Screenshot 2023-04-17 133223.jpg"
+              alt="VHS – Violent Horror Story title screen"
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              onerror="this.parentElement.classList.add('img-placeholder')"
+            />
+          </div>
+          </a>
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="font-heading font-semibold text-xl text-text-primary mb-2">VHS – Violent Horror Story</h3>
+            <p class="text-text-muted text-sm leading-relaxed mb-4 flex-1">
+              Served as Producer on my Associates Capstone, delivering a vertical slice in 10 weeks. Fast scope decisions and clear communication kept the team on track to ship.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="tag tag-sm">Vertical Slice</span>
+              <span class="tag tag-sm">10 Weeks</span>
+              <span class="tag tag-sm">Horror</span>
+              <span class="tag tag-sm">Producer</span>
+            </div>
+            <a href="vhs.html" class="text-accent-light text-sm font-semibold hover:text-accent transition-colors inline-flex items-center gap-1">
+              Learn more <span>→</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT + SKILLS
+  ============================================================ -->
+  <section id="about" class="py-24 px-6 bg-bg-subtle">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="mb-16 reveal">
+        <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-2">About Me</p>
+        <h2 class="font-heading font-bold text-4xl md:text-5xl text-text-primary">The Person Behind the Schedule</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+
+        <!-- Bio + photo -->
+        <div class="reveal">
+          <div class="w-24 h-24 rounded-full bg-bg-card border-2 border-accent/30 overflow-hidden mb-8">
+            <img
+              src="assets/images/portrait.png"
+              alt="Alex Krabach"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <p class="text-text-muted leading-relaxed text-lg mb-6">
+            I'm Alex Krabach — a producer and studio lead with a track record of shipping titles across multiple studios. I founded Quantum Shrimp Studio in 2023 and have led cross-discipline teams of up to 16 people from pre-production through release.
+          </p>
+          <p class="text-text-muted leading-relaxed mb-6">
+            My job is to protect the team's time, translate between disciplines, and make sure what we set out to build is what actually ships. I hold a Bachelor's in Digital Gaming and Interactive Media from LWIT and have professional experience at Apple as a Technical Expert — supporting and training team members under real-world pressure.
+          </p>
+          <p class="text-text-muted leading-relaxed">
+            When I'm not producing, I'm writing — I've self-published <a href="books.html" class="text-accent-light hover:text-accent transition-colors">four novels</a> available through Amazon in print, audiobook, and ebook.
+          </p>
+        </div>
+
+        <!-- Skills -->
+        <div class="reveal">
+          <h3 class="font-heading font-semibold text-xl text-text-primary mb-6">Tools &amp; Skills</h3>
+
+          <div class="space-y-6">
+            <div>
+              <p class="text-xs text-text-muted uppercase tracking-widest mb-3">Production</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-tag">Agile / Scrum</span>
+                <span class="skill-tag">Sprint Planning</span>
+                <span class="skill-tag">Milestone Tracking</span>
+                <span class="skill-tag">Risk Management</span>
+                <span class="skill-tag">Stakeholder Comms</span>
+                <span class="skill-tag">Hiring & Onboarding</span>
+                <span class="skill-tag">Standup Facilitation</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-xs text-text-muted uppercase tracking-widest mb-3">Tools</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-tag">Jira</span>
+                <span class="skill-tag">Confluence</span>
+                <span class="skill-tag">Perforce</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Notion</span>
+                <span class="skill-tag">Slack</span>
+                <span class="skill-tag">Google Workspace</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-xs text-text-muted uppercase tracking-widest mb-3">Other</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-tag">Card Game Design</span>
+                <span class="skill-tag">Kickstarter</span>
+                <span class="skill-tag">Published Author</span>
+              </div>
+            </div>
+            <div>
+              <p class="text-xs text-text-muted uppercase tracking-widest mb-3">Platforms</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="skill-tag">PC / Steam</span>
+                <span class="skill-tag">Console</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact" class="py-24 px-6 bg-bg-primary">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <p class="text-accent text-sm font-semibold tracking-widest uppercase mb-4">Get In Touch</p>
+      <h2 class="font-heading font-bold text-4xl md:text-5xl text-text-primary mb-6">
+        Let's Make Something.
+      </h2>
+      <p class="text-text-muted text-lg leading-relaxed mb-12">
+        I'm actively looking for production roles — associate, junior, or coordinator.
+        If you're building something interesting, I'd love to hear about it.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+
+        <!-- Email -->
+        <a
+          href="mailto:alex@krabach.com"
+          class="contact-btn group flex items-center gap-3 px-6 py-3 rounded-lg border border-white/10 hover:border-accent/50 hover:bg-accent/5 transition-all duration-200"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          <span class="text-text-muted group-hover:text-text-primary text-sm font-medium transition-colors">Email Me</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/alex-krabach-b609289a/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-btn group flex items-center gap-3 px-6 py-3 rounded-lg border border-white/10 hover:border-accent/50 hover:bg-accent/5 transition-all duration-200"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          <span class="text-text-muted group-hover:text-text-primary text-sm font-medium transition-colors">LinkedIn</span>
+        </a>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="py-8 px-6 border-t border-white/5 bg-bg-primary">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
+      <p>© 2026 Alex Krabach. Handcrafted HTML, CSS &amp; JS.</p>
+      <p>Producer &amp; Project Manager · Open to opportunities</p>
+    </div>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
